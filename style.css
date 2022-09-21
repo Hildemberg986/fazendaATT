@@ -1,3 +1,17 @@
-.titulo{ 
-    background-color: chocolate;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: darkgray;
+    margin: 0px;
+    padding: 1px;
+}
+
+.button {
+    background-color: rgb(20,153,230);
+    color: rgb(0, 0, 0);
+    border: 5px rgb(20, 153, 230) solid;
+    text-decoration: none;
+    float:left;
 }
