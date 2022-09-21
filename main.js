@@ -1,11 +1,18 @@
-const { app, BrowserWindow } = require("electron")
+const { app, BrowserWindow, Menu } = require("electron");
+const { constant } = require("lodash");
 
-function createWindow () {
-  const win = new BrowserWindow({
+var mainWindow = null;
+async function createWindow() {
+  window = new BrowserWindow({
     width: 800,
     height: 600,
-  })
+  });
 
-  win.loadFile("index.html")
+  await window.loadFile("index.html");
+  //Remover Menu
+  let menu = Menu.buildFromTemplate([]);
+  Menu.setApplicationMenu(menu);
 }
-app.whenReady().then(createWindow)
+
+//on ready
+app.whenReady().then(createWindow);
