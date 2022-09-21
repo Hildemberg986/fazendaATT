@@ -1,2 +1,2 @@
 npm install --save-dev electron-packager
-testado - ok
+
