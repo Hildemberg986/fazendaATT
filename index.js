@@ -29,7 +29,7 @@ function createWindow() {
   mainWindow.show();
 }
 
-// criar janela filha
+// criar janela filha cadastro
 function createcadastrowin() {
   cadastroWindow = new BrowserWindow({
     width: 1000,
