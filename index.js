@@ -59,7 +59,14 @@ function createcadastrowin() {
 ipcMain.on("openChildWindow", (event, arg) => {
   createcadastrowin();
 });
-  
+
+
+
+
+
+
+
+//on app
 app.whenReady().then(() => {
   createWindow();
   
