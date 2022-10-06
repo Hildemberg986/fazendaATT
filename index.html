@@ -4,7 +4,25 @@
     <title>fazenda</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <body>
+      <div>
+        <button onclick="goToSettingsWindow()">janela 1</button>
+        <script>
+          const ipc1 = window.require("electron").ipc1Renderer;
+  
+          // Function that will be called on click
+          // event of "Go to settings window" button
+          function goToSettingsWindow() {
+            // Make sure to do ipc.send('some String'),
+            // where 'some String' must be same with
+            // the first parameter of ipcMain.on() in app.js
+            ipc1.send("openpesquisaWindow");
+          }
+        </script>
+      </div>
+    </body>
+  </body>
   <body>
     <div>
       <button onclick="goToSettingsWindow()">janela</button>

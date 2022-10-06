@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain } = require("electron");
+const { app, BrowserWindow, Menu, ipcMain, ipc1Main} = require("electron");
 const path = require("path");
 //const BrowserWindow = electron.remote.BrowserWindow;
 
@@ -57,6 +57,36 @@ ipcMain.on("opencadastroWindow", (event, arg) => {
   createcadastrowin();
 });
 
+
+//
+
+// criar janela filha pesquisa
+function createpesquisawin() {
+  pesquisaWindow = new BrowserWindow({
+    width: 1000,
+    height: 700,
+    modal: true,
+    show: false,
+    parent: mainWindow, // adição do parente
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
+    },
+  });
+
+  // carregar janela cadastro.html file
+  pesquisaWindow.loadFile("pesquisa.html");
+
+  pesquisaWindow.once("ready-to-show", () => {
+    pesquisaWindow.show();
+  });
+}
+
+ipcMain.on("openpesquisaWindow", (event, arg) => {
+  createpesquisawin();
+});
 //on app
 app.whenReady().then(() => {
   createWindow();
