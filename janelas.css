@@ -1,0 +1,120 @@
+.modalpesquisa{
+    width: auto;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 50ms ease-in;
+    -moz-transition: opacity 50ms ease-in;
+    transition: opacity 50ms ease-in;
+    pointer-events: none;
+    
+  }
+
+  .modalpesquisa:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modalpesquisa > h2 {   
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+
+  }
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: -20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+    text-decoration: none;
+  }
+
+/* tela de cadastro */
+.modal.cadastro{
+    width: auto;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 50ms ease-in;
+    -moz-transition: opacity 50ms ease-in;
+    transition: opacity 50ms ease-in;
+    pointer-events: none;
+    
+  }
+
+  .modal.cadastro:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal.cadastro > h2 {   
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+
+  }
+  /* tela de alterar cadastro */
+.modal.alterar.cadastro{
+    width: auto;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 50ms ease-in;
+    -moz-transition: opacity 50ms ease-in;
+    transition: opacity 50ms ease-in;
+    pointer-events: none;
+    
+  }
+
+  .modal.alterar.cadastro:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal.alterar.cadastro > h2 {   
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+
+  }
+  
