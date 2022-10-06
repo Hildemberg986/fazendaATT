@@ -1,12 +1,16 @@
-const { app, BrowserWindow, Menu, ipcMain, ipc1Main} = require("electron");
+const { app, BrowserWindow, Menu, ipcMain } = require("electron");
 const path = require("path");
 //const BrowserWindow = electron.remote.BrowserWindow;
+
+
 
 let mainWindow;
 
 // Function to create independent window or main window
 function createWindow() {
   mainWindow = new BrowserWindow({
+    //titleBarStyle: "hidden",
+    //titleBarOverlay: true,
     width: 800,
     height: 600,
     // Make sure to add webPreferences with
@@ -30,8 +34,8 @@ function createWindow() {
 }
 
 // criar janela filha cadastro
-function createcadastrowin() {
-  cadastroWindow = new BrowserWindow({
+function createchildwin() {
+  childWindow = new BrowserWindow({
     width: 1000,
     height: 700,
     modal: true,
@@ -46,47 +50,17 @@ function createcadastrowin() {
   });
 
   // carregar janela cadastro.html file
-  cadastroWindow.loadFile("cadastro.html");
+  childWindow.loadFile("cadastro.html");
 
-  cadastroWindow.once("ready-to-show", () => {
-    cadastroWindow.show();
+  childWindow.once("ready-to-show", () => {
+    childWindow.show();
   });
 }
 
-ipcMain.on("opencadastroWindow", (event, arg) => {
-  createcadastrowin();
+ipcMain.on("openchildWindow", (event, arg) => {
+  createchildwin();
 });
 
-
-//
-
-// criar janela filha pesquisa
-function createpesquisawin() {
-  pesquisaWindow = new BrowserWindow({
-    width: 1000,
-    height: 700,
-    modal: true,
-    show: false,
-    parent: mainWindow, // adição do parente
-    frame: false,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true,
-    },
-  });
-
-  // carregar janela cadastro.html file
-  pesquisaWindow.loadFile("pesquisa.html");
-
-  pesquisaWindow.once("ready-to-show", () => {
-    pesquisaWindow.show();
-  });
-}
-
-ipcMain1.on("openpesquisaWindow", (event, arg) => {
-  createpesquisawin();
-});
 //on app
 app.whenReady().then(() => {
   createWindow();
