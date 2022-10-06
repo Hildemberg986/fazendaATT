@@ -84,7 +84,7 @@ function createpesquisawin() {
   });
 }
 
-ipcMain.on("openpesquisaWindow", (event, arg) => {
+ipcMain1.on("openpesquisaWindow", (event, arg) => {
   createpesquisawin();
 });
 //on app
