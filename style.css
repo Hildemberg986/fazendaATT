@@ -1,6 +1,12 @@
 * {
+    
     margin: 0px;
     padding: 0px;
+}
+.link_modal{
+    text-decoration: none;
+    color: black;
+    background-color: aqua;
 }
 body {
     background-color: darkgray;
