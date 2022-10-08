@@ -3,26 +3,42 @@
   <head>
     <title>fazenda</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="janelas.css"/>
+    <link rel="stylesheet" href="janelas.css" />
   </head>
 
   <body>
     <div>
-      <a class= "link_cadastro" href="#Modal.cadastro">cadastro</a>
-      <a class= "link_pesquisa" href="#Modal.pesquisa">Pesquisa</a>
-      <a class= "link_alterar_cadastro" href="#Modal.alterar.cadastro">altera cadastro</a>
+      <button onclick="location.href='#Modal.cadastro'">Cadastro</button>
+      <button onclick="location.href='#Modal.pesquisa'">Pesquisa</button>
+      <button onclick="location.href='#Modal.alterar.cadastro'">
+        Alterar Cadastro
+      </button>
+      <button  onclick="location.href='teste.html'" >
+        open
+      </button>
     </div>
-<div id="Modal.pesquisa" class="modalpesquisa">
-  <a href="#fechar" title="Fechar" class="fechar">x</a>
-  <h2>Janela Pesquisa</h2>
-</div>
-<div id="Modal.cadastro" class="modal cadastro">
-  <a href="#fechar" title="Fechar" class="fechar">x</a>
-  <h2>Janela Cadastro</h2>
-</div>
-<div id="Modal.alterar.cadastro" class="modal alterar cadastro">
-  <a href="#fechar" title="Fechar" class="fechar">x</a>
-  <h2>Janela Alterar Cadastro</h2>
-</div>
+    <div id="Modal.pesquisa" class="modalpesquisa">
+      <a href="#fechar" title="Fechar" class="fechar">x</a>
+      <h2>Janela Pesquisa</h2>
+    </div>
+    <div id="Modal.cadastro" class="modal cadastro">
+        <button onclick="location.href='#fechar'" title="fechar" class="botton">X</button>
+      <h2>Janela Cadastro</h2>
+      <form action="/pagina-processa-dados-do-form" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" />
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" />
+        </div>
+    </form>
+    </div>
+    <div id="Modal.alterar.cadastro" class="modal alterar cadastro">
+      <a href="#fechar" title="Fechar" class="fechar">x</a>
+      <h2>Janela Alterar Cadastro</h2>
+    </div>
   </body>
+  <body></body>
 </html>
