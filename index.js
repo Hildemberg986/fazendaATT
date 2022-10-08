@@ -1,8 +1,7 @@
-const { app, BrowserWindow, Menu, ipcMain } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
+const { constant } = require("lodash");
 const path = require("path");
 //const BrowserWindow = electron.remote.BrowserWindow;
-
-
 
 let mainWindow;
 
@@ -21,6 +20,7 @@ function createWindow() {
     },
     show: false,
   });
+  
 
   // Main window loads index.html file
   mainWindow.loadFile("index.html");
@@ -32,36 +32,6 @@ function createWindow() {
   mainWindow.maximize();
   mainWindow.show();
 }
-
-// criar janela filha cadastro
-function createchildwin() {
-  childWindow = new BrowserWindow({
-    width: 1000,
-    height: 700,
-    modal: true,
-    show: false,
-    parent: mainWindow, // adição do parente
-    frame: false,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true,
-    },
-  });
-
-  // carregar janela cadastro.html file
-  childWindow.loadFile("cadastro.html");
-
-  childWindow.once("ready-to-show", () => {
-    childWindow.show();
-  });
-}
-
-ipcMain.on("openchildWindow", (event, arg) => {
-  createchildwin();
-});
-
-//on app
 app.whenReady().then(() => {
   createWindow();
 
