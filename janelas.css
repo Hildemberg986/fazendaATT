@@ -1,4 +1,5 @@
 .modalpesquisa{
+  
     width: auto;
     height: auto;
     margin-top: 25px;
@@ -32,6 +33,15 @@
     text-align: center;
 
   }
+  /* botão fechar */
+  .botton{
+    width: 30px;
+    height: 30px;
+border: none;
+background-color: red;
+color: #ff4545;
+  }
+
   .fechar {
     position: absolute;
     width: 30px;
